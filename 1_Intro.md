@@ -21,11 +21,11 @@ Selecting relevant data structure helps faster and responsive code. Decide the n
 * runtime - the time when a program is running after being compiled and launched.
 
 _Algorithms_ -> instructions that the computer follows to carry out tasks:
-* Sorting algorithms;
-* Search algorithms;
-* Divide and conquer algorithms;
-* Greedy algorithms;
-* Brute force algorithms.
+* Sorting algorithms (methods used to arrange elements of a list/array in a particular order);
+* Search algorithms (find an item or value in a dataset);
+* Divide and conquer algorithms (Merge Sort: splits the array into halves, sorts them, and merges them back together);
+* Greedy algorithms (optimization and decision-making of best possible choice at each step, without considering future consequences);
+* Brute force algorithms (systematically tries all possible solutions until it finds the correct one).
 
 Data structures -> maintaining and storing data.
 Algorithms -> instructions to utilize/leverage data.
