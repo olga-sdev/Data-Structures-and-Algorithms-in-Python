@@ -151,8 +151,15 @@ yacko.set_link_node(dot)
 dot.set_link_node(wacko)
 
 dots_data = yacko.get_link_node().get_value()
+
 wackos_data = dot.get_link_node().get_value()
 
 print(dots_data) 
 print(wackos_data)
 ```
+
+Explanation yacko.get_link_node().get_value() order:
+
+* yacko.get_link_node() -> gets the node that yacko is linked to, which is dot.
+* .get_value() -> gets the value stored in the dot node.
+
