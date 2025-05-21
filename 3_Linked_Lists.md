@@ -82,3 +82,17 @@ class LinkedList:
   def get_head_node(self):
     return self.head_node
 ```
+
+
+#### Linked Lists Implementation II
+
+_Task_
+1. Define an .insert_beginning() method which takes new_value as an argument.
+Inside the method, instantiate a Node with new_value. Name this new_node.
+Now, link new_node to the existing head_node.
+Finally, replace the current head_node with new_node.
+2. Define a .stringify_list() method we can use to print out a string representation of a list’s nodes’ values.
+The method should traverse the list, beginning at the head node, and collect each node’s value in a string.
+Once the end of the list has been reached, the method should return the string.
+You can use str() to convert integers to strings!
+Be sure to add "\n" between values so that each value prints on a new line.
