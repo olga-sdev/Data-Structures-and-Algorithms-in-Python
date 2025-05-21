@@ -47,3 +47,18 @@ _Task_
  def get_link_node(self):
     return self.link_node
 ```
+
+
+#### Nodes Python Setters
+Value is set when the Node is create.
+
+Link_node is set and updated with setter.
+
+_Task_
+* Implement the .set_link_node() setter in the Node class.
+```
+  # Define your set_link_node method below:
+  def set_link_node(self, link_node):
+    self.link_node = link_node
+    return self.link_node
+```
