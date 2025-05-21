@@ -13,3 +13,34 @@ In order to remove node_b, you must first link node_a to node_c (where node_b wa
 * traversing (or traveling through) the linked list.
 
 
+#### Node Implementation
+Implementation of linked list in Python.
+
+_Task_
+1. Create an empty Node class.   
+Inside, define an __init__() method for the Node. It should take a value and a next_node.
+next_node should default to None if not provided. These variables should be saved to self with corresponding key names.
+2. Define .get_value() and .get_next_node() methods. These should return the corresponding values from self.
+3. Define a .set_next_node() method that takes self and next_node as parameters and allows you to update the link to the next node.
+4. Outside the Node class, create an instance of Node called my_node with a value of 44.
+Use .get_value() to print the value of my_node.
+
+```
+# Define your Node class below:
+class Node:
+  def __init__(self, value, next_node=None):
+    self.value = value
+    self.next_node = next_node
+
+  def get_value(self):
+    return self.value
+
+  def get_next_node(self):
+    return self.next_node
+
+  def set_next_node(self, next_node):
+    self.next_node = next_node
+
+my_node = Node(44)
+print(my_node.get_value())
+```
