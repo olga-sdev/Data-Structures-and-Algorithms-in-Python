@@ -276,3 +276,20 @@ class LinkedList:
         else:
           current_node = next_node
 ```
+
+
+Example_3:
+```
+class Node:
+  def __init__(self, value, next_node=None):
+    self.value = value
+    self.next_node = next_node
+
+class LinkedList:
+  def __init__(self, head_node=None):
+    self.head_node = head_node
+    
+  def add_new_head(self, new_head_node):
+    new_head_node.next_node = self.head_node
+    self.head_node = new_head_node
+```
