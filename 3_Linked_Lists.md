@@ -546,4 +546,29 @@ For example, if the list has 100 nodes, the approach will use space for 100 extr
 The space needed increases as the list gets longer, which is called O(n) space complexity.
 
 
+```
+def list_nth_last(linked_list, n):
+  linked_list_as_list = []
+  current_node = linked_list.head_node
+  while current_node:
+    linked_list_as_list.append(current_node)
+    current_node = current_node.get_next_node()
+  return linked_list_as_list[len(linked_list_as_list) - n]
+```
 
+
+```
+def nth_last_node(linked_list, n):
+  current = None
+  tail_seeker = linked_list.head_node
+  count = 1
+  while tail_seeker:
+    tail_seeker = tail_seeker.get_next_node()
+    count += 1
+    if count >= n + 1:
+      if current is None:
+        current = linked_list.head_node
+      else:
+        current = current.get_next_node()
+  return current
+```
