@@ -293,3 +293,51 @@ class LinkedList:
     new_head_node.next_node = self.head_node
     self.head_node = new_head_node
 ```
+
+
+#### Swap two nodes in a singly linked list in Python
+
+Swapping nodes in a linked list is useful for changing the order of elements without changing their values. 
+This can help with sorting, organizing data, or meeting specific requirements in a program. 
+Swapping nodes keeps the list structure, but rearranges the nodes’ positions.
+
+Given a linked list and the 2 elements to be swapped _val1_ and _val2_, required to keep track of 4 values:
+
+* node1 -> val1
+* node1_prev -> previous node of val1
+* node2 -> val2
+* node2_prev -> previous node of val2
+
+Steps for iteration:
+* Iterate through the list looking for _node1_ to be swapped, keeping track of the _node1_prev_.
+(To find the node with the value val1, start at the head of the linked list.
+As you move through each node, check if the current node’s value matches val1. If it does, stop.
+If not, remember the current node as the previous node (node1_prev) and move to the next node.
+Repeat this until you find the match or reach the end of the list. This way, you always know both the node to swap and the node before it.);
+* Repeat step 1 looking for the _node2_;
+* If _node1_prev_ is None, _node1_ -> head of the list -> set the list’s head to _node2_.
+(If node1_prev is None, it means there was no node before node1.
+This only happens if node1 is the first node in the list (the head).
+To swap correctly, make node2 the new head of the list by updating the list’s head pointer to point to node2.);
+![Your paragraph text (1)](https://github.com/user-attachments/assets/d94201cf-0e8a-4ef5-83ee-1e8daa4b4eea)
+
+* Otherwise, set _node1_prev_‘s next node -> _node2_;
+* If _node2_prev_ is None, set the list’s head -> _node1_;
+* Otherwise, set _node2_prev_‘s next node to _node1_;
+* Set _node1_‘s next node to _node2_‘s next node;
+* Set _node2_‘s next node to _node1_‘s next node.
+
+Step-by-step explanation:
+
+* Start at the head of the list and look for the node with value val1. As you move, remember the previous node (node1_prev).
+* Do the same to find the node with value val2 and its previous node (node2_prev).
+* If node1 is the head (no previous node), update the head to point to node2.
+(After updating the head to node2, node1 is no longer the first node in the list.
+Next, the pointers are adjusted so that _node1 and node2 swap places_.
+node1 will be somewhere else in the list, and its position depends on the rest of the swap logic.
+The list’s structure is updated so both nodes remain in the list, just in each other’s original positions.)
+* If not, make node1_prev point to node2.
+* If node2 is the head, update the head to point to node1.
+* If not, make node2_prev point to node1.
+* Swap the next pointers of node1 and node2 so they take each other’s place in the list.
+
