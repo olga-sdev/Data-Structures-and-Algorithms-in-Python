@@ -526,3 +526,24 @@ Swapping 0 with 5
 1
 5
 ```
+
+
+#### Two Pointers Moving in Parallel
+
+Consider the following problem:
+
+Create a method that returns the nth last element of a singly linked list.
+
+For example: given a linked list with the following elements 1 -> 2 -> 3 -> 4 -> 5, return the 2nd to last element. The answer would be element 4.
+
+_Approaches_
+
+Use a list to store a representation of the linked list, and then to obtain the nth to last element from this list. 
+The approach use lots of memory maintaining a dual representation of the same data. 
+An approach like this results in an extra O(n) space being allocated.
+This means the method uses extra memory that grows with the size of the linked list. 
+For example, if the list has 100 nodes, the approach will use space for 100 extra items. 
+The space needed increases as the list gets longer, which is called O(n) space complexity.
+
+
+
