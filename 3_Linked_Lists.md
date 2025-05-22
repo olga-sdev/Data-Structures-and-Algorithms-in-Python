@@ -389,3 +389,140 @@ def swap_nodes(input_list, val1, val2):
     node2_prev = node2
     node2 = node2.get_next_nore()
 ```
+
+
+#### Updating the Preceding Nodes’ Pointers
+
+Set node1_prev and node2_prev‘s next nodes, starting with node1_prev: 
+* Check if node1_prev is None.
+* If it is, then the node1 is the head of the list: update/swap node2 -> head.
+* If node1_prev isn’t None -> set its next node to node2 (node1 -> node2).
+
+```
+# Still inside the swap_nodes() function
+if node1_prev is None:
+  input_list.head_node = node2
+else:
+  node1_prev.set_next_node(node2)
+
+if node2_prev is None:
+  input_list.head_node = node1
+else:
+  node2_prev.set_next_node(node1)
+```
+
+#### Updating the Nodes’ Next Pointers
+
+The last step is to update the pointers from node1 and node2 with a help of temporary variable. 
+
+```
+temp = node1.get_next_node()
+node1.set_next_node(node2.get_next_node())
+node2.set_next_node(temp)
+```
+
+#### Edge Cases
+
+1. If there is no matching node for one of the inputs:
+The current swap_nodes() function will not run because of accessing the next node of a node that is None.
+
+For this case check if either node1 or node2 is None:
+
+```
+if (node1 is None or node2 is None):
+  print("Swap not possible - one or more element is not in the list")
+  return
+```
+
+2. If the two nodes to be swapped are the same:
+Checks if the val1 is the same as val2, and then return to end the function
+
+```
+if val1 == val2:
+  print("Elements are the same - no swap needed")
+  return
+```
+
+#### Completed function
+
+```
+import Node
+import LinkedList
+
+def swap_nodes(input_list, val1, val2):
+  print(f'Swapping {val1} with {val2}')
+
+  node1_prev = None
+  node2_prev = None
+  node1 = input_list.head_node
+  node2 = input_list.head_node
+
+  if val1 == val2:
+    print("Elements are the same - no swap needed")
+    return
+
+  while node1 is not None:
+    if node1.get_value() == val1:
+      break
+    node1_prev = node1
+    node1 = node1.get_next_node()
+
+  while node2 is not None:
+    if node2.get_value() == val2:
+      break
+    node2_prev = node2
+    node2 = node2.get_next_node()
+
+  if (node1 is None or node2 is None):
+    print("Swap not possible - one or more element is not in the list")
+    return
+
+  if node1_prev is None:
+    input_list.head_node = node2
+  else:
+    node1_prev.set_next_node(node2)
+
+  if node2_prev is None:
+    input_list.head_node = node1
+  else:
+    node2_prev.set_next_node(node1)
+
+  temp = node1.get_next_node()
+  node1.set_next_node(node2.get_next_node())
+  node2.set_next_node(temp)
+
+
+ll = LinkedList.LinkedList()
+for i in range(10):
+  ll.insert_beginning(i)
+
+print(ll.stringify_list())
+swap_nodes(ll, 9, 5)
+print(ll.stringify_list())
+
+
+Output:
+
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+
+Swapping 0 with 5
+9
+8
+7
+6
+0
+4
+3
+2
+1
+5
+```
