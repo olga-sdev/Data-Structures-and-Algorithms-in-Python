@@ -357,3 +357,35 @@ The list’s structure is updated so both nodes remain in the list, just in each
 * If not, make node2_prev point to node1.
 * Swap the next pointers of node1 and node2 so they take each other’s place in the list.
 
+
+#### Finding the Matching and Preceding Nodes
+
+Implementing code for steps 1 and 2. 
+In order to swap the two nodes -> first find them. 
+Use the Node class’s _.get_next_node()_ method in order to access the next node:
+
+* Set _node1_ equal to the head of the list;
+* Create a while loop that runs while node1 isn’t None. 
+* Inside the loop, check if node1‘s value matches val1.
+* If so, break out of the loop as the node was found.
+* If there is no match, update node1_prev to be node1 and move node1 to its next node.
+
+```
+def swap_nodes(input_list, val1, val2):
+  node1 = input_list.head_node
+  node2 = input_list.head_node
+  node1_prev = None
+  node2_prev = None
+
+  while node1 is not None:
+    if node1.get_value() == val1:
+      break
+    node1_prev = node1
+    node1 = node1.get_next_node()
+
+  while node2 is not None:
+    if node2.get_value() == val2:
+      break
+    node2_prev = node2
+    node2 = node2.get_next_nore()
+```
