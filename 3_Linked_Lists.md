@@ -321,10 +321,15 @@ This only happens if node1 is the first node in the list (the head).
 To swap correctly, make node2 the new head of the list by updating the list’s head pointer to point to node2.);
 ![Your paragraph text (1)](https://github.com/user-attachments/assets/d94201cf-0e8a-4ef5-83ee-1e8daa4b4eea)
 
+
 * Otherwise, set _node1_prev_‘s next node -> _node2_;
 ![Your paragraph text (2)](https://github.com/user-attachments/assets/d524afc9-7cd6-48b0-ae76-a817f3d7eb50)
 
+
 * If _node2_prev_ is None, set the list’s head -> _node1_;
+![Your paragraph text (3)](https://github.com/user-attachments/assets/b84ad8ff-2d5e-41e7-905b-95b336d805b1)
+
+
 * Otherwise, set _node2_prev_‘s next node to _node1_;
 * Set _node1_‘s next node to _node2_‘s next node;
 * Set _node2_‘s next node to _node1_‘s next node.
