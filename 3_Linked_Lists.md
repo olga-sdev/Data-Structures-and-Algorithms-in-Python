@@ -331,8 +331,17 @@ To swap correctly, make node2 the new head of the list by updating the list’s 
 
 
 * Otherwise, set _node2_prev_‘s next node to _node1_;
+![Your paragraph text (4)](https://github.com/user-attachments/assets/043773ae-d6f4-48d8-b341-c7cb1d886645)
+
+
 * Set _node1_‘s next node to _node2_‘s next node;
+![Your paragraph text (5)](https://github.com/user-attachments/assets/15e108a3-d268-49b0-83b5-f0bea4703b56)
+
+
 * Set _node2_‘s next node to _node1_‘s next node.
+![Your paragraph text (6)](https://github.com/user-attachments/assets/70db2a6b-ebe7-4fbc-b790-77ca684faf60)
+
+
 
 Step-by-step explanation:
 
