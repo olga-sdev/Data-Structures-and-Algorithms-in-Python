@@ -32,3 +32,63 @@ Updating the pointer at the end of the list -> set the next pointer of the new t
 _Removing from the middle of the list_:
 * set the removed node’s preceding node’s next pointer to its following node.
 * set the removed node’s following node’s previous pointer to its preceding node.
+
+
+#### _Node Class and Constructor_
+
+Doubly linked list -> the nodes have pointers to the previous node as well as the next node (head and tail):
+* value;
+* pointer to the previous node;
+* pointer to the next node.
+
+_Task_
+
+1. Create an __init__() method (constructor) that only has self as a parameter, since each list will be empty when it’s created.
+2. Inside your __init__() method create head_node and tail_node instance variables. The nodes have no value yet, so set them to None.
+
+Doubly linked lists usecases:
+* A music player with “next” and “previous” buttons;
+* An app that shows you where your subway is on the train line;
+* The “undo” and “redo” functionality in a web browser.
+
+```
+class Node:
+  def __init__(self, value, next_node=None, prev_node=None):
+    self.value = value
+    self.next_node = next_node
+    self.prev_node = prev_node
+    
+  def set_next_node(self, next_node):
+    self.next_node = next_node
+    
+  def get_next_node(self):
+    return self.next_node
+
+  def set_prev_node(self, prev_node):
+    self.prev_node = prev_node
+    
+  def get_prev_node(self):
+    return self.prev_node
+  
+  def get_value(self):
+    return self.value
+    
+
+class DoublyLinkedList:
+  def __init__(self):
+    self.head_node = None
+    self.tail_node = None
+```
+
+
+_Adding to the Head_
+
+_Task_
+1. Define an .add_to_head() method that takes self and new_value as parameters.
+Inside, create:
+* A new_head Node that takes new_value as a parameter;
+* A current_head Node that’s set to the list’s head.
+2. If there is a current head to the list:
+* Set current_head‘s previous node to new_head;
+* Set new_head‘s next node to current_head.
+Remember to use the Node class’s .set_prev_node() and .set_next_node() methods.
