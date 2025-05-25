@@ -138,6 +138,8 @@ class DoublyLinkedList:
 
 ```
 
+_Adding to Tail_
+
 Doubly linked have a tail property that avoid of iterating the list. In .add_to_head() method:
 
 * Check the current tail in the list (list is _not empty_);
