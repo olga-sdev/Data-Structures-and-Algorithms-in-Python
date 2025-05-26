@@ -221,3 +221,102 @@ class DoublyLinkedList:
       self.head_node = new_tail
 
 ```
+
+
+_Removing head_
+
+Due to the added tail property, removing the head in a doubly linked list is different from a singly linked list:
+
+* Check if there’s a current head to the list.
+* If not (_list is empty_): method ends
+* If yes (_list is not empty_): update the list’s head to be the _current head’s next node_
+* If the updated head is not None (the list had > 1 element):
+* Set the _head’s previous node_ -> None
+* If the removed head == tail of the list (there was only 1 element in list):
+* Call .remove_tail()
+* Return the removed head’s value
+
+
+_Taks_
+
+1. Define a .remove_head() method that only takes self as a parameter. 
+Inside, create a removed_head variable and set it to the list’s head node.
+2. Check if removed_head has no value. 
+If so, that means there’s nothing to remove, so return None to end the method.
+3. Outside of if-statement, set the list’s head to removed_head‘s next node.
+If the list still has a head, set its previous node to None, since the head of the list shouldn’t have a previous node.
+4. Check if removed_head is equal to the list’s tail. 
+If so, call the .remove_tail() method.
+5. Return removed_head‘s value.
+
+```python
+class Node:
+  def __init__(self, value, next_node=None, prev_node=None):
+    self.value = value
+    self.next_node = next_node
+    self.prev_node = prev_node
+    
+  def set_next_node(self, next_node):
+    self.next_node = next_node
+    
+  def get_next_node(self):
+    return self.next_node
+
+  def set_prev_node(self, prev_node):
+    self.prev_node = prev_node
+    
+  def get_prev_node(self):
+    return self.prev_node
+  
+  def get_value(self):
+    return self.value
+    
+
+class DoublyLinkedList:
+  def __init__(self):
+    self.head_node = None
+    self.tail_node = None
+  
+  def add_to_head(self, new_value):
+    new_head = Node(new_value)
+    current_head = self.head_node
+
+    if current_head != None:
+      current_head.set_prev_node(new_head)
+      new_head.set_next_node(current_head)
+
+    self.head_node = new_head
+
+    if self.tail_node == None:
+      self.tail_node = new_head
+
+  def add_to_tail(self, new_value):
+    new_tail = Node(new_value)
+    current_tail = self.tail_node
+
+    if current_tail != None:
+      current_tail.set_next_node(new_tail)
+      new_tail.set_prev_node(current_tail)
+
+    self.tail_node = new_tail
+
+    if self.head_node == None:
+      self.head_node = new_tail
+
+  def remove_head(self):
+    removed_head = self.head_node
+
+    if removed_head == None:
+      return None
+
+    self.head_node = removed_head.get_next_node()
+
+    if self.head_node != None:
+      self.head_node.set_prev_node(None)
+
+    if removed_head == self.tail_node:
+      self.remove_tail()
+
+    return removed_head.get_value()
+```
+
