@@ -67,6 +67,9 @@ class Stack:
     else:
       print("This stack is totally empty.")
 
-  def peek()
+  def peek(self):
+    if self.size > 0:
+      return self.top_item.get_value()
+    print("The stack is empty.")
 
 ```
