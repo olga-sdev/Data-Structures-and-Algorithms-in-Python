@@ -32,6 +32,7 @@ class Node:
   def set_next_node(self, next_node):
     self.next_node = next_node
 
+
 class Stack:
   def __init__(self, limit=1000):
     self.top_item = None
@@ -50,5 +51,22 @@ class Stack:
     else:
       print("Out of space!")
 
+  def pop(self):
+    """
+    assign to item_to_remove the top item;
+    then, assign to top item the next value into the stack, because current is set to be removed;
+    reduce the size of stack by 1 item;
+    return the value of the removed item
+    """
+
+    if self.size > 0:
+      item_to_remove = self.top_item
+      self.top_item = item_to_remove.get_next_node()
+      self.size = -1
+      return item_to_remove.get_value()
+    else:
+      print("This stack is totally empty.")
+
+  def peek()
 
 ```
