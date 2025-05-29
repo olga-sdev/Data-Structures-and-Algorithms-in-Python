@@ -129,7 +129,7 @@ def build_binary_search_tree(list_of_records):
 
   return tree_node
 
-sorted_list = [1, 50, 10, 15, 20]
+sorted_list = [1, 10, 15, 20, 50]
 binary_search_tree = build_binary_search_tree(sorted_list)
 print(binary_search_tree)
 
@@ -138,16 +138,33 @@ Output:
 
 
 Middle index: 2
-Middle value: 10
+Middle value: 15
+
 Middle index: 1
-Middle value: 50
+Middle value: 10
+
 Middle index: 0
 Middle value: 1
+
 Middle index: 1
-Middle value: 20
+Middle value: 50
+
 Middle index: 0
-Middle value: 15
-{'middle_value_of_list': 10, 'left_subelement': {'middle_value_of_list': 50, 'left_subelement': {'middle_value_of_list': 1, 'left_subelement': 'no sub-elements', 'right_subelement': 'no sub-elements'}, 'right_subelement': 'no sub-elements'}, 'right_subelement': {'middle_value_of_list': 20, 'left_subelement': {'middle_value_of_list': 15, 'left_subelement': 'no sub-elements', 'right_subelement': 'no sub-elements'}, 'right_subelement': 'no sub-elements'}}
+Middle value: 20
+
+{'middle_value_of_list': 15,
+
+'left_subelement':
+
+{'middle_value_of_list': 10,
+'left_subelement': {'middle_value_of_list': 1, 'left_subelement': 'no sub-elements', 'right_subelement': 'no sub-elements'},
+'right_subelement': 'no sub-elements'},
+
+'right_subelement':
+
+{'middle_value_of_list': 50,
+'left_subelement': {'middle_value_of_list': 20, 'left_subelement': 'no sub-elements', 'right_subelement': 'no sub-elements'},
+'right_subelement': 'no sub-elements'}}
 
 """
 ```
