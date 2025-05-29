@@ -133,6 +133,12 @@ sorted_list = [1, 10, 15, 20, 50]
 binary_search_tree = build_binary_search_tree(sorted_list)
 print(binary_search_tree)
 
+```
+
+![image](https://github.com/user-attachments/assets/dbd47339-7db8-42bd-9b55-a7c51415026b)
+
+```python
+
 """
 Output:
 
@@ -168,7 +174,5 @@ Middle value: 20
 
 """
 ```
-
-![image](https://github.com/user-attachments/assets/dbd47339-7db8-42bd-9b55-a7c51415026b)
 
 
