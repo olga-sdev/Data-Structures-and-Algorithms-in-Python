@@ -169,5 +169,6 @@ Middle value: 20
 """
 ```
 
+![image](https://github.com/user-attachments/assets/dbd47339-7db8-42bd-9b55-a7c51415026b)
 
 
