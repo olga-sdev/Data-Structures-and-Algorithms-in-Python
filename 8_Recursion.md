@@ -65,7 +65,7 @@ _Call Stack Model of Recursion_
 def countdown(value):
   call_stack = []
   while value > 0:
-    call_stack.append({"input":value})
+    call_stack.append(value)
     print("Call Stack:", call_stack)
     value -= 1
   print("\nBase Case Reached\n")
@@ -78,19 +78,89 @@ countdown(3)
 """
 Output:
 
-Call Stack: [{'input': 3}]
-Call Stack: [{'input': 3}, {'input': 2}]
-Call Stack: [{'input': 3}, {'input': 2}, {'input': 1}]
+    
+Call Stack: [3]
+Call Stack: [3, 2]
+Call Stack: [3, 2, 1]
 
 Base Case Reached
 
-Popping {'input': 1} from call stack
-Call Stack: [{'input': 3}, {'input': 2}]
-Popping {'input': 2} from call stack
-Call Stack: [{'input': 3}]
-Popping {'input': 3} from call stack
+Popping 1 from call stack
+Call Stack: [3, 2]
+Popping 2 from call stack
+Call Stack: [3]
+Popping 3 from call stack
 Call Stack: []
 """
 ```
 
+_Recursion in Python_
+
+Recursive function accepts an arg and base case (condition), it has:
+* _base case_ -> input evaluation to interrupt the recurtion;
+* _recursive step_ -> call(s) to recursive function to bring the input to the base case.
+
+```python
+def countdown(value):
+  if value <= 0:  # base case
+    print('done')
+  else:
+    print(value)
+    countdown(value - 1)  # recursive case
+```
+
+
+_Build Binary Search Tree_
+
+```python
+def build_binary_search_tree(list_of_records):
+  if len(list_of_records) == 0:
+    return 'no sub-elements'
+
+  middle_index_of_list = len(list_of_records) // 2
+  middle_value_of_list = list_of_records[middle_index_of_list]
+
+  print(f'Middle index: {middle_index_of_list}')
+  print(f'Middle value: {middle_value_of_list}')
+
+  tree_node = {'data': middle_value_of_list}
+  tree_node['left_subelement'] = build_binary_search_tree(list_of_records[ : middle_index_of_list])
+  tree_node['right_subelement'] = build_binary_search_tree(list_of_records[middle_index_of_list+1 : ])
+
+  return tree_node
+
+sorted_list = [1, 5, 10, 15, 20]
+binary_search_tree = build_binary_search_tree(sorted_list)
+print(binary_search_tree)
+
+"""
+Output:
+
+Middle index: 2
+Middle value: 10
+Middle index: 1
+Middle value: 5
+Middle index: 0
+Middle value: 1
+Middle index: 1
+Middle value: 20
+Middle index: 0
+Middle value: 15
+{'data': 10, 'left_subelement':
+  {'data': 5, 'left_subelement':
+    {'data': 1,
+     'left_subelement': 'no sub-elements',
+     'right_subelement': 'no sub-elements'},
+'right_subelement': 'no sub-elements'},
+'right_subelement':
+  {'data': 20, 'left_subelement':
+    {'data': 15,
+     'left_subelement': 'no sub-elements',
+     'right_subelement': 'no sub-elements'},
+'right_subelement': 'no sub-elements'}}
+
+"""
+```
+
+![image](https://github.com/user-attachments/assets/42809c21-203a-4bb2-bd05-de207b85a0ff)
 
