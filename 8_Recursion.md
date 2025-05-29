@@ -129,38 +129,28 @@ def build_binary_search_tree(list_of_records):
 
   return tree_node
 
-sorted_list = [1, 5, 10, 15, 20]
+sorted_list = [1, 50, 10, 15, 20]
 binary_search_tree = build_binary_search_tree(sorted_list)
 print(binary_search_tree)
 
 """
 Output:
 
+
 Middle index: 2
 Middle value: 10
 Middle index: 1
-Middle value: 5
+Middle value: 50
 Middle index: 0
 Middle value: 1
 Middle index: 1
 Middle value: 20
 Middle index: 0
 Middle value: 15
-{'data': 10, 'left_subelement':
-  {'data': 5, 'left_subelement':
-    {'data': 1,
-     'left_subelement': 'no sub-elements',
-     'right_subelement': 'no sub-elements'},
-'right_subelement': 'no sub-elements'},
-'right_subelement':
-  {'data': 20, 'left_subelement':
-    {'data': 15,
-     'left_subelement': 'no sub-elements',
-     'right_subelement': 'no sub-elements'},
-'right_subelement': 'no sub-elements'}}
+{'data': 10, 'left_subelement': {'data': 50, 'left_subelement': {'data': 1, 'left_subelement': 'no sub-elements', 'right_subelement': 'no sub-elements'}, 'right_subelement': 'no sub-elements'}, 'right_subelement': {'data': 20, 'left_subelement': {'data': 15, 'left_subelement': 'no sub-elements', 'right_subelement': 'no sub-elements'}, 'right_subelement': 'no sub-elements'}}
 
 """
 ```
 
-![image](https://github.com/user-attachments/assets/42809c21-203a-4bb2-bd05-de207b85a0ff)
+
 
