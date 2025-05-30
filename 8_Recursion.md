@@ -176,3 +176,17 @@ Middle value: 20
 ```
 
 
+_Call stack_ for a recursive function calls the last function in stack when the base case met.
+
+_Big-O Runtime for Recursive function_ == number of recursive function calls.
+The value varies depending of algorithm complexity.
+
+Recursive function of input N which calls _N times_ has runtime of _N(O)_.
+
+Recursive function of input N which calls _itself twice per function_ has runtime of _O(2^N)_.
+
+
+_Weak Base Case_ -> does not stop the function from recurtion and lead to stack overflow error.
+
+_Execution context_ -> set of args to recursive function call.
+
