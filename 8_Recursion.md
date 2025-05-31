@@ -190,3 +190,61 @@ _Weak Base Case_ -> does not stop the function from recurtion and lead to stack 
 
 _Execution context_ -> set of args to recursive function call.
 
+
+_Recursive depth of Binary Search Tree_
+
+_Binary search tree_ -> data structure that builds a sorted input list into 2 subtrees (subelements).
+
+Left subelement value < root value;
+
+Right subelement value > root value;
+
+Recursive function to determine the depth of tree:
+
+```python
+
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+def depth(node):
+    if node is None:
+        return 0
+    
+    left_depth = depth(node.left)
+    right_depth = depth(node.right)
+    
+    return max(left_depth, right_depth) + 1
+
+# Example usage
+root = Node(10)
+root.left = Node(5)
+root.right = Node(15)
+root.left.left = Node(3)
+root.left.right = Node(7)
+
+print(f'Depth of the BST {depth(root)}')  # Output: Depth of the BST
+
+"""
+Output:
+
+Depth of the BST 3
+
+```
+
+_Sum Digits with Recursion_
+
+```python
+def sum_digits(digit):
+  if digit <= 9:
+    return digit
+  last_digit = digit % 10
+  return sum_digits(digit // 10) + last_digit
+
+print(f'Sum of digits {sum_digits(749)}')  # 749 -> 7 + 4 + 9
+# Sum of digits 20
+
+```
+
