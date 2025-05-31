@@ -280,11 +280,7 @@ print(is_palindrome('abba'))  # True
 
 _Fibonacci Iterative Function_
 
-In particular example: fibonacci from 11 -> iterating from 2 to 12 and appending record:
-* 2: 2 + 0 (2);
-* 3: 2 + 1 (3);
-* 4: 3 + 2 (5);
-* 5: 4 + 3 (7);
+In particular example: fibonacci from 11 
 
 ```python
 def fibonacci(digit):
@@ -293,12 +289,28 @@ def fibonacci(digit):
   fibonacci_record = [0, 1]
   for num in range(2, digit+1):
     record = fibonacci_record[num-1] + fibonacci_record[num-2]
+    print(record)
     fibonacci_record.append(record)
   return fibonacci_record[num]
 
 print(f'Fibonacci: {fibonacci(11)}')
 
-# Fibonacci: 89
+
+"""
+Output:
+
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+Fibonacci: 89
+"""
 
 ```
 
