@@ -248,3 +248,31 @@ print(f'Sum of digits {sum_digits(749)}')  # 749 -> 7 + 4 + 9
 
 ```
 
+
+_Panildrome in Recursion_
+
+Palindrome - the work cam be read the same both ways (forward and backwork).
+
+Recursive function for palindrome word which works for specific cases:
+
+```python
+def is_palindrome(word):
+  if len(word) == 1:
+    return True
+  if word[0] != word[-1]:
+    return False
+  return is_palindrome(word[1:-1])
+
+print(is_palindrome('abba')) # index error
+print(is_palindrome('aba')) # True
+```
+
+Other example of function without recurtion for all cases:
+
+```python
+def is_palindrome(word):
+  return word == word[::-1]
+  
+print(is_palindrome('abba'))  # True
+
+```
