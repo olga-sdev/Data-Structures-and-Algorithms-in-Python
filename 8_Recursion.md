@@ -253,21 +253,21 @@ _Panildrome in Recursion_
 
 Palindrome - the work cam be read the same both ways (forward and backwork).
 
-Recursive function for palindrome word which works for specific cases:
+Recursive function for palindrome word:
 
 ```python
 def is_palindrome(word):
-  if len(word) == 1:
+  if len(word) <= 1:
     return True
   if word[0] != word[-1]:
     return False
   return is_palindrome(word[1:-1])
 
-print(is_palindrome('abba')) # index error
-print(is_palindrome('aba')) # True
+print(is_palindrome('abba')) # True
+print(is_palindrome('abc')) # False
 ```
 
-Other example of function without recurtion for all cases:
+Other example of function without recurtion:
 
 ```python
 def is_palindrome(word):
@@ -276,3 +276,31 @@ def is_palindrome(word):
 print(is_palindrome('abba'))  # True
 
 ```
+
+
+_Fibonacci Iterative Function_
+
+In particular example: fibonacci from 11 -> iterating from 2 to 12 and appending record:
+* 2: 2 + 0 (2);
+* 3: 2 + 1 (3);
+* 4: 3 + 2 (5);
+* 5: 4 + 3 (7);
+
+```python
+def fibonacci(digit):
+  if digit < 0:
+    raise ValueError('Input beginning from 0')
+  fibonacci_record = [0, 1]
+  for num in range(2, digit+1):
+    record = fibonacci_record[num-1] + fibonacci_record[num-2]
+    fibonacci_record.append(record)
+  return fibonacci_record[num]
+
+print(f'Fibonacci: {fibonacci(11)}')
+
+# Fibonacci: 89
+
+```
+
+
+
