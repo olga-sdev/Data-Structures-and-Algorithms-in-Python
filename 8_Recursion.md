@@ -315,4 +315,20 @@ Fibonacci: 89
 ```
 
 
+_Rucursive Multiplication_
+
+```python
+def recursive_multiply(digit_1, digit_2):
+  if digit_1 == 0 or digit_2 == 0:
+    return 0
+  return digit_1 + recursive_multiply(digit_1, digit_2-1)  # => 7 + 7 + 7 = 21 (3 times per 7 till digit_2 is 0)
+
+print(recursive_multiply(7, 3))
+
+"""
+21
+"""
+```
+
+
 
