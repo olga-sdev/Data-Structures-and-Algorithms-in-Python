@@ -360,3 +360,36 @@ print(factorial(6))  # 6 * 5 * 4 * 3 * 2 * 1 = 720
 ```
 
 
+_Recursively Find Minimum in List_
+
+
+```python
+def find_min_digit(records):
+  print(records)
+  if len(records) == 0:
+    return None
+  if len(records) == 1:
+    return records[0]
+  # compare 2 first elements in list of records
+  if records[0] < records[1]:
+    min_digit = records[0]
+  else:
+    min_digit = records[1]
+    
+  records[1] = min_digit
+  
+  return find_min_digit(records[1:])
+
+
+print(find_min_digit([10, 20, 3, 4]))
+
+"""
+[10, 20, 3, 4]
+[10, 3, 4]
+[3, 4]
+[3]
+3
+"""
+
+```
+    
