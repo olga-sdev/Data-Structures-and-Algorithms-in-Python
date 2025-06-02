@@ -39,3 +39,18 @@ def find_max_element(linked_list):
   
 print(find_max_element([1, 3, 5, 98]))
 ```
+
+
+_Bubble Sort with Linked List_
+
+
+Bubble sort -> comparison of element with neighbor and swap thm in case of descending order.
+
+Each pass of swap takes O(N).
+
+Since there are N elements in list -> N*N swaps or (N^2).
+
+Big O runtime is O(N*N) or O(N^2).
+
+
+
