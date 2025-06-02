@@ -14,7 +14,7 @@ print(algorithm_speed(10))  # 9
 ```
 
 
-_Queue Versus Stack_ -> based on FIFO: takes _O(1)_ runtime to retrieve the first item in a Queue;
+_Queue_ -> based on FIFO: takes _O(1)_ runtime to retrieve the 1st item in a Queue;
 
 _Stack_ -> based on FILO: takes _O(N)_ runtime to retrive the 1st value in Stack;
 
