@@ -280,7 +280,19 @@ print(is_palindrome('abba'))  # True
 
 _Fibonacci Iterative Function_
 
-In particular example: fibonacci from 11 
+In particular example: fibonacci from 11:
+* starting from [0, 1]
+* record _1_ => num 2: fibonacci_record[1] + fibonacci_record[0] => [0, 1, _1_]
+* record _2_ => num 3: fibonacci_record[2] + fibonacci_record[1] => [0, 1, 1, _2_]
+* record _3_ => num 4: fibonacci_record[3] + fibonacci_record[2] => [0, 1, 1, 2, _3_]
+* record _5_ => num 5: fibonacci_record[4] + fibonacci_record[3] => [0, 1, 1, 2, 3, _5_]
+* record _8_ => num 6: fibonacci_record[5] + fibonacci_record[4] => [0, 1, 1, 2, 3, 5,_8_]
+* record _13_ => num 7: fibonacci_record[6] + fibonacci_record[5] => [0, 1, 1, 2, 3, 5, 8,_13_]
+* record _21_ => num 8: fibonacci_record[7] + fibonacci_record[6] => [0, 1, 1, 2, 3, 5, 8, 13,_21_]
+* record _34_ => num 9: fibonacci_record[8] + fibonacci_record[7] => [0, 1, 1, 2, 3, 5, 8, 13, 21,_34_]
+* record _55_ => num 10: fibonacci_record[9] + fibonacci_record[8] => [0, 1, 1, 2, 3, 5, 8, 13, 21, 34,_55_]
+* record _89_ => num 11: fibonacci_record[10] + fibonacci_record[9] => [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55,_89_]
+
 
 ```python
 def fibonacci(digit):
@@ -299,7 +311,7 @@ print(f'Fibonacci: {fibonacci(11)}')
 """
 Output:
 
-1
+1 
 2
 3
 5
@@ -330,5 +342,21 @@ print(recursive_multiply(7, 3))
 """
 ```
 
+
+_Iterative Function for Factorials_ -> multiplication of numbers sequentially from 1 to the given number in function:
+
+```python
+def factorial(number):
+  result = 1
+  while number != 0:
+    result *= number
+    number -= 1
+  return result
+
+print(factorial(6))  # 6 * 5 * 4 * 3 * 2 * 1 = 720
+
+# 720
+
+```
 
 
