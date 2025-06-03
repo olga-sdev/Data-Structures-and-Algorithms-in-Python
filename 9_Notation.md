@@ -53,4 +53,32 @@ Since there are N elements in list -> N*N swaps or (N^2).
 Big O runtime is O(N*N) or O(N^2).
 
 
+_Asymptonic Notation_ describes the running time of algorithm: time the algorithm takes with a given input N.
 
+Notations:
+* big O -> the worst case running time;
+* big Theta (Θ) -> running time is the same for all cases;
+* big Ω -> the best case running time.
+
+In cases of many part of algorithm structure -> it's runtime described based on the slowest part of the program.
+
+Algorithmic Common Runtimes from fastest to slowest:
+* constant Θ(1)
+* logarithmic Θ(log N)
+* linear Θ(N)
+* polynomial Θ(N^2)
+* exponential Θ(2^N)
+* factorial Θ(N!)
+
+![image](https://github.com/user-attachments/assets/78066a03-2fcf-446c-85b4-0905b13fcf74)
+
+
+
+_Big-O Notation_ -> describes the worst-case running time of program: 
+counting numbers of iterations that the algorithm takes in the worst case scenario with an input N.
+
+O(log n) describes the Big-O of a binary search algorithm.
+
+_Big-Ω Notation_ -> describes the best-case running time of program.
+Bubble Sort algorithm has a running time of Ω(N) because in the best case scenario the list is sorted already - 
+the bubble sort will terminate after the first iteration.
