@@ -21,9 +21,6 @@ def pattern_search(text, pattern):
             print(pattern, "found at index", index)
 
 
-pattern_search('My name is Olga', 'Olga')
-
-
 def pattern_search(text, pattern):
     if pattern in text:
         print(pattern, "found at index", text.index(pattern))
@@ -31,6 +28,14 @@ def pattern_search(text, pattern):
         return
 
 
-pattern_search('My name is Olga', 'Olga')
+def test_pattern_search(benchmark):
+    benchmark(pattern_search, text='My name is Olga', pattern='Olga')
+
+
+def test_pattern_search_2(benchmark):
+    benchmark(pattern_search_2, text='My name is Olga', pattern='Olga')
 
 ```
+
+
+![image](https://github.com/user-attachments/assets/ae15d92a-a05b-416a-b405-a065a3ce51f0)
