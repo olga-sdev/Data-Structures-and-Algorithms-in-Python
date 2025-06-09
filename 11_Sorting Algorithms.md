@@ -23,3 +23,27 @@ Algorithm is divided into 2 parts:
 * _2d part_ merges and sorts the single-element lists to twice its size till the orig input size is achieved =>
 => best, worst and avg runtime for this part is O(N) (theta);
 * The combined runtime is O(N log N).
+
+
+_Swapping Variables in Bubble Sort_
+
+Bubble sort function -> iteratively swap element with neighbor with smaller value till elements in list is sorted ASC.
+
+```python
+def swap(arr, left_pos, right_pos):
+    arr[left_pos], arr[right_pos] = arr[right_pos], arr[left_pos]
+
+
+def bubble_sort(arr):
+    for item in arr:
+        for index in range(len(arr) - 1):
+            if arr[index] > arr[index + 1]:
+                swap(arr, index, index + 1)
+    return arr
+
+
+my_arr = bubble_sort([2, 45, 3, 899, 6, 71])
+print(my_arr)
+
+# [2, 3, 6, 45, 71, 899]
+```
