@@ -82,3 +82,24 @@ def merge(left, right):
     return result
 ```
 
+#### Quick Sort Performance
+
+Inefficient in case of imbalanced partitions.
+Worst case -> 1st | last element is always partition point for an array or sub-array:
+one side of partition contains all elements.
+Making recursive stack deeper (O(N^2) runtime).
+
+
+#### Quick Sort General
+
+_Quicksort_ is a method for sorting an array by repeatedly partitioning it into sub-arrays by:
+
+* selecting element from the current array (_pivot element_);
+* comparing element from array with _pivot element_ (swap elements);
+* _partition point_ is point where elements before is less, after is greater then;
+* repeat the process on sub-arrays separated by the partition point -> continue till sub-array contains 1 element.
+* when the partitioning-swapping are done -> array is sorted from smallest to largest.
+
+The worst case runtime -> O(N^2);
+Avg -> O(N logN);
+
