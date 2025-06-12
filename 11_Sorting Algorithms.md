@@ -103,3 +103,39 @@ _Quicksort_ is a method for sorting an array by repeatedly partitioning it into 
 The worst case runtime -> O(N^2);
 Avg -> O(N logN);
 
+
+#### Bubble Sort Algorithm
+
+Sort a list in ASC order: iterating through a list and comparing:
+
+* inner iteration: compare 1st and 2nd elements - swapping, then 2nd and 3d etc.
+* outer iteration: repeated for all elements.
+
+_Bubble sort Big-O Runtime_
+
+2 loops:
+
+* outer loop (_N_ iterations): iterate over each element in the input list;
+* inner loop (_N-1_ iterations): compare and exchange a pair of values in the list.
+
+Big-O runtime for the algorithm is a product of O(N) and O(N-1) => O(N^2).
+
+
+_Bubble sort Swapping Variables_
+
+The Bubble Sort algorithm requires swapping of variables in order to sort them.
+The swapping algorithm is dependent on programming language.
+For the most languages, temporary variable is needed to hold one of the values being swapped:
+
+```python
+temp = num_1
+num_1 = num_2
+num_2 = temp
+```
+
+
+For others (Python), it can be done with the single assignment:
+
+```python
+num1_, num_2 = num_2, num_1
+```
