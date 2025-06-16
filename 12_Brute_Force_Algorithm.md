@@ -65,3 +65,30 @@ except ValueError as msg:
     print(f"{msg}")
 
 ```
+
+
+_Linear Search Multiple Matches_
+
+Linear search function may have more than 1 match from the input list.
+
+In this case -> return list of indices (encountering every match in list).
+
+In case of dis-match raise a ValueError.
+
+```python
+def linear_search(records, match):
+    matches = []
+    for index in range(len(records)):
+        if records[index] == match:
+            matches.append(index)
+    if matches:
+        return f"The matched values are stored at indexes: {matches}"
+    else:
+        raise ValueError(f"{match} not in list of records")
+
+
+items = [0, 100, 10, 1000, 100]
+
+print(linear_search(items, 100))
+
+```
