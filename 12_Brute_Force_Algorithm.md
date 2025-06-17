@@ -92,3 +92,19 @@ items = [0, 100, 10, 1000, 100]
 print(linear_search(items, 100))
 
 ```
+
+
+#### Brute Force Algorithms
+
+Main idea -> go through all possible choices till solution is found.
+
+Time of complexity is proportional to the input size -> algorithm is slow.
+
+
+_Linear search cases_
+
+_Best case_ (O(1)) -> matched item is at the beginning of the list;
+_Worst case_ (O(N)) -> matched item is at the end of the list;
+_Avg runtime_ -> Big-O runtime of O(N); halfway N/2.
+
+Performance -> speed of performance decreases with the increasing the input size of data.
