@@ -56,3 +56,20 @@ Tree can be wide and deep at the same time.
 Each tree node stores a value and references to its child(ren) (sub-element(s)) node.
 
 _Root_ is a not a child of any other node. Tree has only one root.
+
+
+### Tree Traversal: Breadth-First Search and Depth-First Search
+
+[Article](https://www.datacamp.com/tutorial/depth-first-search-in-python)
+
+_Breadth-First Search_ - explores all nodes at the current depth level before changing to next level.
+
+_DFS_(Depth-First Search) has time and space complexity of O(n) - used for problems where it's required to explore every possible solution.
+Example: finding routes on map, which require exhaustive searches.
+
+
+![img_1.png](img_1.png)
+
+[resources](https://media.datacamp.com/cms/google/ad_4nxdqny2bjweno0lenhhrcmnyy4l9bjmakduuls2jeo8vwkuskabdx40x2ws_s6ya8ntavuifypgnnunyh5xc5cfrqy2yuuhdmlgdjdpiumencenisogtlklljankmea4i-qgu61k5ibksdp5pixor3_tgfu.png)
+
+
