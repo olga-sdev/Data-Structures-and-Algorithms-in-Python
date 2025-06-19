@@ -68,7 +68,8 @@ _DFS_(Depth-First Search) has time and space complexity of O(n) - used for probl
 Example: finding routes on map, which require exhaustive searches.
 
 
-![img_1.png](img_1.png)
+![dfs](https://github.com/user-attachments/assets/4f94ff1c-2cba-4525-ac4e-7840e66504b6)
+
 
 [resources](https://media.datacamp.com/cms/google/ad_4nxdqny2bjweno0lenhhrcmnyy4l9bjmakduuls2jeo8vwkuskabdx40x2ws_s6ya8ntavuifypgnnunyh5xc5cfrqy2yuuhdmlgdjdpiumencenisogtlklljankmea4i-qgu61k5ibksdp5pixor3_tgfu.png)
 
