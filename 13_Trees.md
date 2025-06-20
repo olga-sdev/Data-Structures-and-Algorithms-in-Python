@@ -74,3 +74,44 @@ Example: finding routes on map, which require exhaustive searches.
 [resources](https://media.datacamp.com/cms/google/ad_4nxdqny2bjweno0lenhhrcmnyy4l9bjmakduuls2jeo8vwkuskabdx40x2ws_s6ya8ntavuifypgnnunyh5xc5cfrqy2yuuhdmlgdjdpiumencenisogtlklljankmea4i-qgu61k5ibksdp5pixor3_tgfu.png)
 
 
+
+#### DFS recursive implementation
+
+DFS calls each node and sub-nodes till there are no more to visit.
+
+```python
+# Define the decision tree as a dictionary
+tree = {
+    'A': ['B', 'C'],
+    'B': ['D', 'E', 'F'],
+    'C': [],
+    'D': [],
+    'E': [],
+    'F': []
+}
+
+
+def dfs_recursive(tree, node, visited=None):
+    if visited is None:
+        visited = set()  # init visited set
+    
+    visited.add(node)  # mark node with 'visited'
+    print(node)
+    
+    for sub_element in tree[node]:
+        if sub_element not in visited:
+            dfs_recursive(tree, sub_element, visited)
+            
+
+dfs_recursive(tree, 'A')
+
+"""
+A
+B
+D
+E
+F
+C
+"""
+
+```
