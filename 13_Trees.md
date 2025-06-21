@@ -115,3 +115,44 @@ C
 """
 
 ```
+
+#### Iterative DFS
+
+For large decision trees, Python recursion depth limit can cause issues.
+
+That is why it's better to implement DFS iteratively, using manually handling stack.
+
+```python
+tree = {
+    'A': ['B', 'C'],
+    'B': ['D', 'E', 'F'],
+    'C': [],
+    'D': [],
+    'E': [],
+    'F': []
+}
+
+
+def dfs_iterative(tree, start):
+    visited = set()  # tracking the visited nodes
+    stack = [start]  # stack for DFS
+
+    while stack:  # while stack is full
+        node = stack.pop()  # remove node from stack
+        if node not in visited:
+            visited.add(node)  # mark node with 'visited'
+            print(node)
+            stack.extend(reversed(tree[node]))  # add sub-elements to stack
+
+dfs_iterative(tree, 'A')
+
+"""
+A
+B
+D
+E
+F
+C
+"""
+
+```
