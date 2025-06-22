@@ -156,3 +156,31 @@ C
 """
 
 ```
+
+
+#### Recursive DFS 
+
+Pros:
+* Simplicity: compact code
+* Readability: comprehensive 
+Cons:
+* Recursion depth limit: for large graphs
+
+#### Iterative DFS
+
+Pros:
+* No Recursion Limit: because of managing the stack manually 
+Cons:
+* More code: less intuitive, more configs
+* Readability: the code is often more verbose
+
+
+_Time complexity for DFS_
+
+O(V+E):
+* V - number of nodes;
+* E - number of connections ('edges').
+
+_Space complexity_
+
+The space used in DFS depends on numbers of nodes the algorithm keeping track at any given moment.
