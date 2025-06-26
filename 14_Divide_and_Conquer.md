@@ -108,3 +108,37 @@ sub-problems till the problem can be solved directly.
 * more efficient than brute force approach;
 * prone to stack overflow error because of recursion.
 
+
+_Depth First Traversal_
+
+The BinarySearchTree Python class _.depth_first_traversal()_ method prints the in-order depth-first traversal of the tree in ASC.
+
+```python
+def depth_first_traversal(self):
+    if self.left is not None:
+        self.left.depth_first_traversal()
+    print(f'Depth={self.depth}, Value={self.value}')
+    if self.right is not None:
+        self.right.depth_first_traversal()
+```
+
+
+_Getting Node by value_
+
+The BinarySearchTree Python class _.get_node_by_value()_ method takes value and returns _None_ or _BinarySearchTree node_.
+
+Searching through the sides of the tree with recursion.
+
+Performance for avg balanced binary search tree => O(logN):
+
+```python
+def get_node_by_value(self, value):
+    if self.value == value:
+        return self
+    elif self.left is not None and value < self.value:
+        return self.left.get_node_by_vlue(value)
+    elif self.right is not None and value >= self.value:
+        return self.right.get_node_by_value(value)
+    else:
+        return None
+```
