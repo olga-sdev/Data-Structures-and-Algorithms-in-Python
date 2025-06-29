@@ -74,3 +74,8 @@ print(sorted_records)
 # [21, 34, 56, 74, 93, 192]
 
 ```
+
+_.retrieve_max() method_ - return the largest value in a heap:
+* _heap root_ is extracted and replaced by the last element in the heap.
+* _.heapify_down()_ - rebalancing the heap data structure.
+* returns the largest value.
