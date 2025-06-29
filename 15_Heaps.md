@@ -34,3 +34,10 @@ def heapify_up(self):
         index = self.parent_index(index)
     print(f'Heap restored {self.heap_list}')
 ```
+
+_Heapsort_ - sorting algorithm that utilizes the heap data structure to sort an unordered list of data.
+
+Implementation of heapsort algorithm:
+* add items of unsorted list to max-heap;
+* when 1 element in heap -> remove _heap root_ -> locate _heap root_ to the beginning of the list;
+* when _heap_ is empty -> return the sorted list.
