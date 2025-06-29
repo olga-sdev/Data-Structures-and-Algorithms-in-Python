@@ -76,6 +76,12 @@ print(sorted_records)
 ```
 
 
+_.retrieve_max() method_ - return the largest value in a heap:
+* _heap root_ is extracted and replaced by the last element in the heap.
+* _.heapify_down()_ - rebalancing the heap data structure.
+* returns the largest value.
+
+
 ```python
 def retrieve_max(self):
     if self.count == 0:
@@ -102,7 +108,4 @@ def retrieve_max(self):
     # Return the largest value
     return max_value
 ```
-_.retrieve_max() method_ - return the largest value in a heap:
-* _heap root_ is extracted and replaced by the last element in the heap.
-* _.heapify_down()_ - rebalancing the heap data structure.
-* returns the largest value.
+
