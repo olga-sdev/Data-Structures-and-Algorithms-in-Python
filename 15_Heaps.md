@@ -75,6 +75,33 @@ print(sorted_records)
 
 ```
 
+
+```python
+def retrieve_max(self):
+    if self.count == 0:
+        print('Empty heap')
+        return None
+
+    # Store the largest value in a variable
+    max_value = self.heap_list[1]
+    print(f'Removing: {max_value} from {self.heap_list}')
+    
+    # Replace the root of the heap with the last element in list
+    self.heap_list[1] = self.heap_list[self.count]
+    
+    # Decrease the count
+    self.count -= 1
+    
+    # Remove the last element in the list
+    self.heap_list.pop()
+    print(f'Last element moved to first: {self.heap_list}')
+    
+    # Rebalance the heap
+    self.heapify_down()
+    
+    # Return the largest value
+    return max_value
+```
 _.retrieve_max() method_ - return the largest value in a heap:
 * _heap root_ is extracted and replaced by the last element in the heap.
 * _.heapify_down()_ - rebalancing the heap data structure.
