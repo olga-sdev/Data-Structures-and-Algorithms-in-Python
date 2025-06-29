@@ -41,3 +41,36 @@ Implementation of heapsort algorithm:
 * add items of unsorted list to max-heap;
 * when 1 element in heap -> remove _heap root_ -> locate _heap root_ to the beginning of the list;
 * when _heap_ is empty -> return the sorted list.
+
+
+```python
+def heapsort(records):
+    sort = []
+    max_heap = MaxHeap()
+    
+    # Add items of an unsorted list into a max-heap
+    for item in records:
+        max_heap.add(item)
+        
+    """
+    While there is at least one element in the heap,
+    remove the root of the heap and place it at the beginning of the list
+    that will hold the sorted values.
+    Whenever the root is extracted,
+    the hep must be rebalanced.
+    """
+    while max_heap.count > 0:
+        max_value = max_heap.retrieve_max()
+        sort.insert(0, max_value)
+        
+    # Return the sorted list
+    return sort
+    
+
+new_records = [21, 34, 56, 93, 192, 74]
+sorted_records = heapsort(new_records)
+
+print(sorted_records)
+# [21, 34, 56, 74, 93, 192]
+
+```
