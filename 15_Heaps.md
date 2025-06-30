@@ -118,3 +118,25 @@ The larger child is determined using _.get_larger_child_idx()_ method:
 * IF _parent_val_ < _child_val_ -> 2 elements swapped;
 * IF _element_ has no child -> heap restored.
 
+```python
+def heapify_down(self):
+    idx = 1
+    
+    # This while loop will execute as long as a child element is present
+    while self.child_present(idx):
+        print('Heapifying down.')
+
+    # Get the index of the child element with the larger value
+    larger_child_idx = self.get_larger_child_idx(idx)
+
+    child_e = self.heap_list[larger_child_idx]
+    
+    parent_e = self.heap_list[idx]
+
+    # If the parent value is less then the child value, swap the values
+    if parent_e < child_e:
+        self.heap_list[idx] = child_e
+        self.heap_list[larger_child_idx] = parent_e
+        idx = larger_child_idx
+        print(f'Heap restored {self.heap_list}')
+```
