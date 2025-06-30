@@ -109,3 +109,12 @@ def retrieve_max(self):
     return max_value
 ```
 
+_.heapify_down() method_ for rebalancing the heap data structure after the root is removed and replaced with the last element in the heap.
+
+While an element contains a child value, the parent value is compared with the value of its largest child.
+
+The larger child is determined using _.get_larger_child_idx()_ method:
+
+* IF _parent_val_ < _child_val_ -> 2 elements swapped;
+* IF _element_ has no child -> heap restored.
+
