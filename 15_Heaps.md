@@ -140,3 +140,30 @@ def heapify_down(self):
         idx = larger_child_idx
         print(f'Heap restored {self.heap_list}')
 ```
+
+
+
+_.get_larger_child_idx() method_ for comparing the values of 
+an element's children and returns the index of the child element with the larger value.
+
+
+```python
+def get_larger_child_idx(self, idx):
+    # Check if a right child exists
+    if self.right_child_idx(idx) > self.count:
+        print('There is only a left child')
+        return self.left_child_idx(idx)
+    else:
+        left_child_e = self.heap_list[self.left_child_idx(idx)]
+        right_child_e = self.heap_list[self.right_child_idx(idx)]
+        
+    # Compare the left and right child values and return the index of the larger child
+    if left_child_e > right_child_e:
+        print(f'Left child element {str(left_child_e)} is larger than right child element {str(right_child_e)}')
+        return self.right_child_idx(idx)
+    else:
+        print(f'Right child element {str(right_child_e)} is larger than left child element {str(left_child_e)}')
+        return self.right_child_idx(idx)
+        
+```
+
