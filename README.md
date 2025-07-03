@@ -17,4 +17,3 @@ The course is based on [materials of Codecademy](https://www.codecademy.com/enro
 * Heaps and Heapsort
 * Graphs
 * Greedy
-* Pathfinding
